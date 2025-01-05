@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_integer_format.c                                     :::      ::::::: */
-/*                                                         :+:      :+:    :+ */
-/*                                                       +:+ +:+         +:+  */
-/*   By: ibayandu <ibayandu@student.42istanbul.com.tr> +#+  +:+       +#+     */
-/*                                                  +#+#+#+#+#+   +#+         */
-/*   Created: 2024/11/03 21:56:05 by ibayandu             #+#    #+#          */
-/*   Updated: 2024/11/03 22:07:45 by ibayandu            ###   ########.tr    */
+/*                                                        :::      ::::::::   */
+/*   ft_integer_format.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/05 15:52:38 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/01/05 15:59:32 by ibayandu         ###   ########.fr       */
 /*                                                                            */
-/*                                 ▗▄▄▄▖▗▄▄▖  ▗▄▖▗▖  ▗▖▗▄▖ ▗▖  ▗▖▗▄▄▄ ▗▖ ▗▖   */
-/*                                   █  ▐▌ ▐▌▐▌ ▐▌▝▚▞▘▐▌ ▐▌▐▛▚▖▐▌▐▌  █▐▌ ▐▌   */
-/*                                   █  ▐▛▀▚▖▐▛▀▜▌ ▐▌ ▐▛▀▜▌▐▌ ▝▜▌▐▌  █▐▌ ▐▌   */
-/*                                 ▗▄█▄▖▐▙▄▞▘▐▌ ▐▌ ▐▌ ▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀▝▚▄▞▘   */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	ft_putchar(char c, int *total_length);
+void	ft_putnbr(int nbr, int *total_length);
 
 void	ft_integer_format(int *total_length, int i_converted)
 {

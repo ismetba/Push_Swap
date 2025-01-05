@@ -1,20 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_helper.c                                             :::      ::::::: */
-/*                                                         :+:      :+:    :+ */
-/*                                                       +:+ +:+         +:+  */
-/*   By: ibayandu <ibayandu@student.42istanbul.com.tr> +#+  +:+       +#+     */
-/*                                                  +#+#+#+#+#+   +#+         */
-/*   Created: 2024/11/09 13:45:53 by ibayandu             #+#    #+#          */
-/*   Updated: 2024/11/09 17:39:21 by ibayandu            ###   ########.tr    */
+/*                                                        :::      ::::::::   */
+/*   ft_helper.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/05 15:52:23 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/01/05 16:02:28 by ibayandu         ###   ########.fr       */
 /*                                                                            */
-/*                                 ▗▄▄▄▖▗▄▄▖  ▗▄▖▗▖  ▗▖▗▄▖ ▗▖  ▗▖▗▄▄▄ ▗▖ ▗▖   */
-/*                                   █  ▐▌ ▐▌▐▌ ▐▌▝▚▞▘▐▌ ▐▌▐▛▚▖▐▌▐▌  █▐▌ ▐▌   */
-/*                                   █  ▐▛▀▚▖▐▛▀▜▌ ▐▌ ▐▛▀▜▌▐▌ ▝▜▌▐▌  █▐▌ ▐▌   */
-/*                                 ▗▄█▄▖▐▙▄▞▘▐▌ ▐▌ ▐▌ ▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀▝▚▄▞▘   */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	ft_putchar(char c, int *total_length);
+void	ft_unsigned_format(va_list args, int *total_length);
+void	ft_pointer_format(va_list args, int *total_length);
+void	ft_bonus_dash(va_list va, const char *str, int *total_length);
 
 void	ft_router(va_list va, const char *str, int *total_length)
 {

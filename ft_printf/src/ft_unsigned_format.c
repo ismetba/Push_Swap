@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_unsigned_format.c                                    :::      ::::::: */
-/*                                                         :+:      :+:    :+ */
-/*                                                       +:+ +:+         +:+  */
-/*   By: ibayandu <ibayandu@student.42istanbul.com.tr> +#+  +:+       +#+     */
-/*                                                  +#+#+#+#+#+   +#+         */
-/*   Created: 2024/11/03 21:57:10 by ibayandu             #+#    #+#          */
-/*   Updated: 2024/11/03 22:07:22 by ibayandu            ###   ########.tr    */
+/*                                                        :::      ::::::::   */
+/*   ft_unsigned_format.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/05 15:53:31 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/01/05 16:01:08 by ibayandu         ###   ########.fr       */
 /*                                                                            */
-/*                                 ▗▄▄▄▖▗▄▄▖  ▗▄▖▗▖  ▗▖▗▄▖ ▗▖  ▗▖▗▄▄▄ ▗▖ ▗▖   */
-/*                                   █  ▐▌ ▐▌▐▌ ▐▌▝▚▞▘▐▌ ▐▌▐▛▚▖▐▌▐▌  █▐▌ ▐▌   */
-/*                                   █  ▐▛▀▚▖▐▛▀▜▌ ▐▌ ▐▛▀▜▌▐▌ ▝▜▌▐▌  █▐▌ ▐▌   */
-/*                                 ▗▄█▄▖▐▙▄▞▘▐▌ ▐▌ ▐▌ ▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀▝▚▄▞▘   */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	ft_putchar(char c, int *total_length);
+void	ft_putunbr_base(unsigned int nbr, char *base, int *total_length);
 
 void	ft_unsigned_format(va_list args, int *total_length)
 {

@@ -1,20 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_printf.c                                             :::      ::::::: */
-/*                                                         :+:      :+:    :+ */
-/*                                                       +:+ +:+         +:+  */
-/*   By: ibayandu <ibayandu@student.42istanbul.com.tr> +#+  +:+       +#+     */
-/*                                                  +#+#+#+#+#+   +#+         */
-/*   Created: 2024/11/03 21:56:21 by ibayandu             #+#    #+#          */
-/*   Updated: 2024/11/09 17:41:38 by ibayandu            ###   ########.tr    */
+/*                                                        :::      ::::::::   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/05 15:52:47 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/01/05 16:03:01 by ibayandu         ###   ########.fr       */
 /*                                                                            */
-/*                                 ▗▄▄▄▖▗▄▄▖  ▗▄▖▗▖  ▗▖▗▄▖ ▗▖  ▗▖▗▄▄▄ ▗▖ ▗▖   */
-/*                                   █  ▐▌ ▐▌▐▌ ▐▌▝▚▞▘▐▌ ▐▌▐▛▚▖▐▌▐▌  █▐▌ ▐▌   */
-/*                                   █  ▐▛▀▚▖▐▛▀▜▌ ▐▌ ▐▛▀▜▌▐▌ ▝▜▌▐▌  █▐▌ ▐▌   */
-/*                                 ▗▄█▄▖▐▙▄▞▘▐▌ ▐▌ ▐▌ ▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀▝▚▄▞▘   */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void		ft_putchar(char c, int *total_length);
+void		ft_putstr(char *str, int *total_length);
+void		ft_string_format(va_list args, int *total_length, int space, int x);
+void		ft_integer_format(int *total_length, int i_converted);
+void		ft_hex_format(char c, int *total_length, unsigned int u_converted);
+void		ft_router(va_list va, const char *str, int *total_length);
+void		ft_init_zero(int *x, int *y);
 
 void	ft_bonus_dash(va_list va, const char *str, int *total_length)
 {

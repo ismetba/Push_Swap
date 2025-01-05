@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*   ft_pointer_format.c                                     :::      ::::::: */
-/*                                                         :+:      :+:    :+ */
-/*                                                       +:+ +:+         +:+  */
-/*   By: ibayandu <ibayandu@student.42istanbul.com.tr> +#+  +:+       +#+     */
-/*                                                  +#+#+#+#+#+   +#+         */
-/*   Created: 2024/11/03 21:56:15 by ibayandu             #+#    #+#          */
-/*   Updated: 2024/11/03 22:07:42 by ibayandu            ###   ########.tr    */
+/*                                                        :::      ::::::::   */
+/*   ft_pointer_format.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/05 15:52:42 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/01/05 16:01:37 by ibayandu         ###   ########.fr       */
 /*                                                                            */
-/*                                 ▗▄▄▄▖▗▄▄▖  ▗▄▖▗▖  ▗▖▗▄▖ ▗▖  ▗▖▗▄▄▄ ▗▖ ▗▖   */
-/*                                   █  ▐▌ ▐▌▐▌ ▐▌▝▚▞▘▐▌ ▐▌▐▛▚▖▐▌▐▌  █▐▌ ▐▌   */
-/*                                   █  ▐▛▀▚▖▐▛▀▜▌ ▐▌ ▐▛▀▜▌▐▌ ▝▜▌▐▌  █▐▌ ▐▌   */
-/*                                 ▗▄█▄▖▐▙▄▞▘▐▌ ▐▌ ▐▌ ▐▌ ▐▌▐▌  ▐▌▐▙▄▄▀▝▚▄▞▘   */
 /* ************************************************************************** */
 
 #include "../includes/ft_printf.h"
+
+void	ft_putstr(char *str, int *total_length);
+void	ft_putlnbr_base(unsigned long nbr, char *base, int *total_length);
 
 void	ft_pointer_format(va_list args, int *total_length)
 {

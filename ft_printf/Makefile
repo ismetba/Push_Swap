@@ -17,7 +17,7 @@ AR = ar rcs
 
 all: ${NAME}
 
-${NAME}: ${OBJS}
+${NAME}: ${OBJS} $(MAKE) bonus -C ./Libft
 	$(MAKE) bonus -C ./Libft
 	cp ./Libft/libft.a $(NAME)
 	${AR} ${NAME} ${OBJS}
