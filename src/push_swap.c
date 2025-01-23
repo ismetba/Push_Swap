@@ -6,23 +6,22 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 17:58:48 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/01/09 22:21:42 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/01/23 21:21:46 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_stacks *stacks;
-	t_list *stack_a;
-	t_list *stack_b;
-	int has_error;
-	ft_printf(argv[1]);
+	t_stacks	*stacks;
+	t_list		*stack_a;
+	t_list		*stack_b;
+	int			has_error;
+
 	if (argc < 2)
 		return (0);
-	stacks = init_stacks(argv + 1, argc - 1);
-
+	stacks = init_stacks(argv + 1, argc);
 	if (!stacks)
 	{
 		return (invalid_args());
@@ -30,9 +29,7 @@ int main(int argc, char **argv)
 	has_error = check_validate(stacks);
 	if (has_error)
 		return (has_error);
-
 	merge_algorithm(stacks);
-
 	stack_a = stacks->stack_a;
 	stack_b = stacks->stack_b;
 	// ft_printf("----------Stack A---------- \n");
