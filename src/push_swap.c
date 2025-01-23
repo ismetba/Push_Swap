@@ -12,25 +12,43 @@
 
 #include "../includes/push_swap.h"
 
-int	main(int argc, char **argv)
+int main(int argc, char **argv)
 {
-	t_stacks	*stacks;
-	int			has_error;
-
+	t_stacks *stacks;
+	t_list *stack_a;
+	t_list *stack_b;
+	int has_error;
+	ft_printf(argv[1]);
 	if (argc < 2)
 		return (0);
 	stacks = init_stacks(argv + 1, argc - 1);
+
 	if (!stacks)
+	{
 		return (invalid_args());
-	has_error = check_validate(stacks->stack_a);
+	}
+	has_error = check_validate(stacks);
 	if (has_error)
 		return (has_error);
+
+	merge_algorithm(stacks);
+
+	stack_a = stacks->stack_a;
+	stack_b = stacks->stack_b;
+	// ft_printf("----------Stack A---------- \n");
 	// while (stacks->stack_a)
 	// {
 	// 	ft_printf("%d\n", *(int *)(stacks->stack_a->content));
 	// 	stacks->stack_a = stacks->stack_a->next;
 	// }
-	ft_lstclear(&stacks->stack_a, free);
-	ft_lstclear(&stacks->stack_b, free);
+	// ft_printf("----------Stack B---------- \n");
+	// while (stacks->stack_b)
+	// {
+	// 	ft_printf("%d\n", *(int *)(stacks->stack_b->content));
+	// 	stacks->stack_b = stacks->stack_b->next;
+	// }
+	ft_lstclear(&stack_a, free);
+	ft_lstclear(&stack_b, free);
 	free(stacks);
+	return (0);
 }
