@@ -1,25 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_messages.c                                   :+:      :+:    :+:   */
+/*   algorithm_util.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/05 18:54:08 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 22:03:26 by ibayandu         ###   ########.fr       */
+/*   Created: 2025/02/23 22:11:10 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/02/23 22:11:19 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	invalid_args(void)
+int	next_to_power_of_two(int size)
 {
-	ft_putendl_fd("Error", 2);
-	return (1);
+	int	result;
+
+	result = 2;
+	while (result <= size)
+		result *= 2;
+	return (result);
 }
 
-int	duplicated_number(void)
+int	multiple_of_previous_i(int i, int size)
 {
-	ft_putendl_fd("Error", 2);
-	return (2);
+	while (size % i != 0)
+		size--;
+	return (size);
+}
+
+int	multiple_of_next_i(int i, int size)
+{
+	int	result;
+
+	result = i;
+	while (result < size)
+		result += i;
+	return (result);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rr_instructions.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/23 22:04:23 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/02/23 22:04:29 by ibayandu         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../includes/push_swap.h"
 
 static void	rra_lst_op(t_stacks *stacks)
@@ -37,11 +49,13 @@ void	rra(t_stacks *stacks)
 	rra_lst_op(stacks);
 	ft_putendl_fd("rra", 1);
 }
+
 void	rrb(t_stacks *stacks)
 {
 	rrb_lst_op(stacks);
 	ft_putendl_fd("rrb", 1);
 }
+
 void	rrr(t_stacks *stacks)
 {
 	rra_lst_op(stacks);

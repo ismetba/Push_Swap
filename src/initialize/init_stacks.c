@@ -6,30 +6,30 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:00:45 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/01/23 21:21:18 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/23 18:29:03 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void *free_handling(t_stacks *stacks)
+void	*free_handling(t_stacks *stacks)
 {
 	ft_lstclear(&stacks->stack_a, free);
 	free(stacks);
-	return NULL;
+	return (NULL);
 }
 
-
-t_stacks *init_stacks(char **argv, int argc)
+t_stacks	*init_stacks(char **argv, int argc)
 {
-	int *value;
-	t_stacks *stacks;
+	int			*value;
+	t_stacks	*stacks;
 
+	if (**argv == '\0')
+		return (0);
 	stacks = (t_stacks *)malloc(sizeof(t_stacks));
 	if (!stacks)
 		return (NULL);
-
-	while (argc-->1)
+	while (argc-- > 1)
 	{
 		value = ft_atoi_modified(*argv);
 		if (!value)

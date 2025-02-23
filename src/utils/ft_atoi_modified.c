@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 20:23:06 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/01/09 22:25:37 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/23 21:59:57 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ static int	ft_skip_whitespace_and_sign(const char *str, int *i, int *sign)
 	while (str[*i] == ' ' || str[*i] == '\t' || str[*i] == '\n'
 		|| str[*i] == '\v' || str[*i] == '\f' || str[*i] == '\r')
 		(*i)++;
-	if (str[*i] == '-')
+	if (str[*i] == '-' && ft_strlen(str) > 1)
 	{
 		*sign = -1;
 		(*i)++;
 	}
-	else if (str[*i] == '+')
+	else if (str[*i] == '+' && ft_strlen(str) > 1)
 		(*i)++;
 	return (*i);
 }
@@ -48,7 +48,7 @@ int	*ft_atoi_modified(const char *str)
 	if (ptr == NULL)
 		return (NULL);
 	*ptr = (int)(sign * result);
-	if (result * sign<-2147483648 | result * sign> 2147483647)
+	if (result * sign < -2147483648 | result * sign > 2147483647)
 	{
 		free(ptr);
 		return (NULL);

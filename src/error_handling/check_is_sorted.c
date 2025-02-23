@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   error_messages.c                                   :+:      :+:    :+:   */
+/*   check_is_sorted.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/05 18:54:08 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 22:03:26 by ibayandu         ###   ########.fr       */
+/*   Created: 2025/02/23 16:59:00 by ibayandu          #+#    #+#             */
+/*   Updated: 2025/02/23 19:51:22 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	invalid_args(void)
+int	check_is_sorted(t_list *stack)
 {
-	ft_putendl_fd("Error", 2);
+	while (stack && stack->next)
+	{
+		if (*(int *)stack->content > *(int *)stack->next->content)
+		{
+			return (0);
+		}
+		stack = stack->next;
+	}
 	return (1);
-}
-
-int	duplicated_number(void)
-{
-	ft_putendl_fd("Error", 2);
-	return (2);
 }
