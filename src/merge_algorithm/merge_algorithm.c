@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/23 22:05:01 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 22:53:03 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/25 21:54:45 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,7 @@ void	merge_algorithm(t_stacks *stacks)
 {
 	int	i;
 	int	j;
-	int	next_to_pow_of_two;
 
-	next_to_pow_of_two = next_to_power_of_two(stacks->size_of_org_lst);
 	i = 4;
 	move_to_b(stacks, i);
 	sort_by_two(stacks, stacks->size_of_org_lst / 4);

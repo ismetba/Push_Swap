@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 15:53:27 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/01/05 15:56:23 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/25 20:51:47 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_putchar(char c, int *total_length);
 void	ft_putstr(char *str, int *total_length);
 
-void	ft_string_format(va_list args, int *total_length, int space, int x)
+void	ft_string_format(va_list args, int *total_length, int x)
 {
 	char	*string_ptr;
 	int		strlen;
@@ -28,7 +28,6 @@ void	ft_string_format(va_list args, int *total_length, int space, int x)
 		return ;
 	}
 	strlen = ft_strlen(string_ptr);
-	space = 01;
 	while (x > strlen && x > 0)
 	{
 		x = x - 1;

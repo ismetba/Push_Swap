@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 18:00:45 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 18:29:03 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/25 22:06:39 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ t_stacks	*init_stacks(char **argv, int argc)
 	if (**argv == '\0')
 		return (0);
 	stacks = (t_stacks *)malloc(sizeof(t_stacks));
+	stacks->stack_a = NULL;
+	stacks->stack_b = NULL;
 	if (!stacks)
 		return (NULL);
 	while (argc-- > 1)

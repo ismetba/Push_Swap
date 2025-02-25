@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 20:23:06 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 21:59:57 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/25 21:34:45 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	*ft_atoi_modified(const char *str)
 	if (ptr == NULL)
 		return (NULL);
 	*ptr = (int)(sign * result);
-	if (result * sign < -2147483648 | result * sign > 2147483647)
+	if (result * sign < -2147483648 || result * sign > 2147483647)
 	{
 		free(ptr);
 		return (NULL);

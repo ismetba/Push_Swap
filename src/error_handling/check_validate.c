@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 19:05:32 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 17:49:28 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/25 21:36:26 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ int	check_validate(t_stacks *stacks)
 		free(stacks);
 		return (duplicated_number());
 	}
+	return (0);
 }

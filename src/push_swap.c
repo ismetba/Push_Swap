@@ -6,7 +6,7 @@
 /*   By: ibayandu <ibayandu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 17:58:48 by ibayandu          #+#    #+#             */
-/*   Updated: 2025/02/23 22:03:10 by ibayandu         ###   ########.fr       */
+/*   Updated: 2025/02/25 21:33:24 by ibayandu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,23 @@ void	handle_5_size(t_stacks *stacks)
 	sort_to_a(stacks, 3, 2);
 }
 
+int	free_stacks(t_stacks *stacks, int has_b)
+{
+	if (has_b)
+	{
+		ft_lstclear(&stacks->stack_a, free);
+		free(stacks);
+		return (0);
+	}
+	ft_lstclear(&stacks->stack_a, free);
+	ft_lstclear(&stacks->stack_b, free);
+	free(stacks);
+	return (0);
+}
+
 int	main(int argc, char **argv)
 {
 	t_stacks	*stacks;
-	t_list		*stack_a;
-	t_list		*stack_b;
 	int			has_error;
 
 	if (argc < 2)
@@ -76,15 +88,12 @@ int	main(int argc, char **argv)
 	if (has_error)
 		return (has_error);
 	if (check_is_sorted(stacks->stack_a))
-		return (0);
+		return (free_stacks(stacks, 1));
 	if (ft_lstsize(stacks->stack_a) <= 3)
 		handle_small_size(stacks);
 	else if (ft_lstsize(stacks->stack_a) == 5)
 		handle_5_size(stacks);
 	else
 		merge_algorithm(stacks);
-	ft_lstclear(&stacks->stack_a, free);
-	ft_lstclear(&stacks->stack_b, free);
-	free(stacks);
-	return (0);
+	return (free_stacks(stacks, 0));
 }
